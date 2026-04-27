@@ -108,8 +108,91 @@ If this privacy policy is updated, the changes will be reflected in the "Last Up
 
 If you have questions about this privacy policy, contact:
 
-**Email:** [your email here]
+# Privacy Policy — TDLidar
+
+**Last Updated: March 30, 2026**
+
+## Overview
+
+TDLidar is a depth streaming app developed by Aristides Lintzeris. This privacy policy explains how TDLidar handles your data.
+
+**The short version: TDLidar does not collect, store, or transmit any personal data. Period.**
 
 ---
+
+## Data Collection
+
+TDLidar does **not** collect any data whatsoever. Specifically:
+
+- **No personal information** is collected (name, email, phone number, etc.)
+- **No usage analytics** or tracking of any kind
+- **No crash reports** are sent to us or any third party
+- **No advertising** or ad tracking
+- **No cookies** or similar tracking technologies
+- **No user accounts** — the app requires no sign-up or login
+- **No data is sent to our servers** — we don't have servers
+
+---
+
+## Camera and Sensor Data
+
+TDLidar requires access to your iPhone's front-facing TrueDepth camera to capture depth data. This data:
+
+- Is processed **entirely on your device**
+- Is streamed **only to your local Wi-Fi network** via the NDI protocol
+- Is **never stored** on your device (no recordings, no cache, no logs)
+- Is **never transmitted** outside your local network
+- Is **never sent** to us or any third party
+
+The depth stream is sent over your local network using the NDI (Network Device Interface) protocol to NDI-compatible software (like TouchDesigner) running on other devices on the same Wi-Fi network. This data never leaves your local network.
+
+---
+
+## Local Network Access
+
+TDLidar requires local network access to stream depth data via NDI. This access is used exclusively for:
+
+- Broadcasting the NDI video stream on your local network
+- Allowing NDI receivers (like TouchDesigner) to discover and connect to the stream
+
+No data is sent to the internet, to external servers, or to any party outside your local network.
+
+---
+
+## Third-Party Services
+
+TDLidar does not use any third-party services, SDKs, or frameworks that collect data. The NDI SDK (by Vizrt/NDI) is used for local network streaming only and does not collect or transmit any data externally.
+
+---
+
+## Data Storage
+
+TDLidar does not store any data on your device beyond its own app settings (depth mode preferences, frame rate, etc.). These settings are stored locally in the app sandbox and are deleted when you uninstall the app.
+
+---
+
+## Children's Privacy
+
+TDLidar does not collect any data from anyone, including children under 13. The app is rated 4+ and contains no objectionable content.
+
+---
+
+## Changes to This Policy
+
+If we make changes to this privacy policy, we will update the "Last Updated" date at the top of this page. Since TDLidar does not collect data, any future changes would only reflect new features or clarifications — not new data collection practices.
+
+---
+
+## Contact
+
+If you have any questions about this privacy policy, you can reach us at:
+
+- **GitHub:** https://github.com/aristideslintzeris/TDLidar
+- **Developer:** Aristides Lintzeris
+
+
+
+*This privacy policy applies to TDLidar version 2.0 and later.*
+
 
 *TDInput is an independent app. Apple, Apple Watch, iPhone, TouchDesigner, and HealthKit are trademarks of their respective owners.*
