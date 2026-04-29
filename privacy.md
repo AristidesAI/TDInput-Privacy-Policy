@@ -1,7 +1,7 @@
 # TDInput — Privacy Policy
 
 **Effective Date:** March 19, 2026
-**Last Updated:** March 19, 2026
+**Last Updated:** May 30, 2026
 
 ---
 
