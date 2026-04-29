@@ -133,6 +133,8 @@ TDLidar does **not** collect any data whatsoever. Specifically:
 - **No user accounts** — the app requires no sign-up or login
 - **No data is sent to our servers** — we don't have servers
 
+NO FACE DATA IS SENT OVER THE INTERNET OR SHARED WITH THIRD PARTIES - THIS APP IS USED FOR TOUCHDESIGNER CREATIVE EFFECTS AND ONLY OCCURS ON THE LOCAL NETWORK
+
 ---
 
 ## Camera and Sensor Data
