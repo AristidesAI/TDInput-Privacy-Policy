@@ -9,7 +9,9 @@
 
 TDInput is designed with privacy as a core principle. The app processes sensor data entirely on your devices and your local network. No data is collected, stored, uploaded, or shared with anyone — including us.
 
-SPELLING IT OUT SUPER CLEARLY: NO TRUEDEPTH DATA IS BEING SHARED WITH THIRD PARTIES, THE APP DOESNT CONNECT TO THE INTERNET ONLY THE LOCAL NETWORK. APP STORE REVIEWER PLEASE READ THIS BEFORE REJECTING APP AGAIM.....
+SPELLING IT OUT SUPER CLEARLY: NO TRUEDEPTH DATA IS BEING SHARED WITH THIRD PARTIES, THE APP DOESNT CONNECT TO THE INTERNET ONLY THE LOCAL NETWORK. APP STORE REVIEWER PLEASE READ THIS BEFORE REJECTING APP AGAIN.....
+
+"When the user enables Face tracking mode, TDLidar uses ARKit's face-tracking API to compute 52 blend-shape coefficients and the face's 3D transform. This face data is not stored, not used for identification, and is only transmitted as OSC messages on the user's local Wi-Fi network — same handling as depth data above."
 ---
 
 ## Data Processing
