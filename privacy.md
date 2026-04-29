@@ -9,6 +9,7 @@
 
 TDInput is designed with privacy as a core principle. The app processes sensor data entirely on your devices and your local network. No data is collected, stored, uploaded, or shared with anyone — including us.
 
+SPELLING IT OUT SUPER CLEARLY: NO TRUEDEPTH DATA IS BEING SHARED WITH THIRD PARTIES, THE APP DOESNT CONNECT TO THE INTERNET ONLY THE LOCAL NETWORK. APP STORE REVIEWER PLEASE READ THIS BEFORE REJECTING APP AGAIM.....
 ---
 
 ## Data Processing
