@@ -1,178 +1,129 @@
-# TDInput — Privacy Policy
-
-**Effective Date:** March 19, 2026
-**Last Updated:** May 30, 2026
-
----
-
-## Overview
-
-TDInput is designed with privacy as a core principle. The app processes sensor data entirely on your devices and your local network. No data is collected, stored, uploaded, or shared with anyone — including us.
-
-SPELLING IT OUT SUPER CLEARLY: NO TRUEDEPTH DATA IS BEING SHARED WITH THIRD PARTIES, THE APP DOESNT CONNECT TO THE INTERNET ONLY THE LOCAL NETWORK. APP STORE REVIEWER PLEASE READ THIS BEFORE REJECTING APP AGAIN.....
-
-"When the user enables Face tracking mode, TDLidar uses ARKit's face-tracking API to compute 52 blend-shape coefficients and the face's 3D transform. This face data is not stored, not used for identification, and is only transmitted as OSC messages on the user's local Wi-Fi network — same handling as depth data above."
----
-
-## Data Processing
-
-TDInput reads the following sensor data from your iPhone and Apple Watch:
-
-- Motion and orientation (accelerometer, gyroscope)
-- Magnetometer (compass heading)
-- Barometric altitude and pressure
-- Heart rate and health metrics (via HealthKit, Apple Watch only)
-- Digital Crown input (Apple Watch only)
-- Battery level
-
-**All sensor data is:**
-- Processed in real time on your device
-- Transmitted only over your local Wi-Fi network to a destination IP address you configure (your Mac running TouchDesigner)
-- Never stored on disk, in a database, or in any persistent form
-- Never transmitted to any external server, cloud service, or third party
-- Discarded immediately after transmission — no logs, no history, no recordings
-
----
-
-## Data Collection
-
-**We do not collect any data. Period.**
-
-- No personal information
-- No usage analytics
-- No crash reporting
-- No device identifiers
-- No advertising identifiers
-- No cookies or tracking pixels
-- No telemetry of any kind
-
-The app contains no analytics SDKs, no third-party frameworks, and no network calls to any server other than the local IP address you manually configure.
-
----
-
-## HealthKit Data
-
-TDInput requests access to HealthKit to read heart rate data during an active workout session on your Apple Watch. This data is:
-
-- Read in real time and forwarded over your local network as an OSC message
-- Never written back to HealthKit (beyond the workout session itself)
-- Never stored, cached, or logged by the app
-- Never transmitted outside your local network
-
-HealthKit access is optional. The app functions fully with iPhone sensors alone if you decline HealthKit permissions or do not have an Apple Watch.
-
----
-
-## Local Network Usage
-
-TDInput sends UDP packets containing sensor data to a local IP address and port that you specify. This communication:
-
-- Occurs only on your local Wi-Fi network
-- Uses the OSC (Open Sound Control) protocol — an open standard for real-time data
-- Does not traverse the internet
-- Does not connect to any remote servers
-- Stops immediately when you close the app or toggle streaming off
-
----
-
-## Third Parties
-
-TDInput does not integrate with, send data to, or receive data from any third-party services. There are no:
-
-- Analytics providers
-- Advertising networks
-- Cloud storage services
-- Social media integrations
-- Crash reporting services
-
-The app is entirely self-contained.
-
----
-
-## Data Retention
-
-TDInput retains no data. The only information stored on your device is your configuration preferences (IP address and port number), saved locally via UserDefaults. These can be cleared by deleting the app.
-
----
-
-## Children's Privacy
-
-TDInput does not collect any data from any user, including children under 13. The app is rated 4+ and contains no objectionable content.
-
----
-
-## Changes to This Policy
-
-If this privacy policy is updated, the changes will be reflected in the "Last Updated" date above. As TDInput collects no data, meaningful changes to this policy are unlikely.
-
----
-
-## Contact
-
-If you have questions about this privacy policy, contact:
-
 # Privacy Policy — TDLidar
 
-**Last Updated: March 30, 2026**
+**Last Updated: April 30, 2026**
+*Applies to TDLidar 6.0 and later, including the optional TDLidar Watch App companion.*
 
 ## Overview
 
-TDLidar is a depth streaming app developed by Aristides Lintzeris. This privacy policy explains how TDLidar handles your data.
+TDLidar is a real-time capture suite developed by Aristides Lintzeris for streaming depth, camera, motion, audio, and tracking data from an iPhone (and optionally an Apple Watch) into TouchDesigner, OBS, Resolume, and other NDI / OSC receivers on the same Wi-Fi network.
 
-**The short version: TDLidar does not collect, store, or transmit any personal data. Period.**
+**The short version: TDLidar does not collect, store, or transmit any personal data off your local network. Period.**
+
+There is no account, no analytics, no cloud, no third-party SDK that phones home. The app operates entirely on your device and on your local Wi-Fi.
 
 ---
 
-## Data Collection
-
-TDLidar does **not** collect any data whatsoever. Specifically:
+## What TDLidar does NOT do
 
 - **No personal information** is collected (name, email, phone number, etc.)
-- **No usage analytics** or tracking of any kind
+- **No usage analytics** or telemetry of any kind
 - **No crash reports** are sent to us or any third party
 - **No advertising** or ad tracking
 - **No cookies** or similar tracking technologies
 - **No user accounts** — the app requires no sign-up or login
 - **No data is sent to our servers** — we don't have servers
-
-NO FACE DATA IS SENT OVER THE INTERNET OR SHARED WITH THIRD PARTIES - THIS APP IS USED FOR TOUCHDESIGNER CREATIVE EFFECTS AND ONLY OCCURS ON THE LOCAL NETWORK
-
----
-
-## Camera and Sensor Data
-
-TDLidar requires access to your iPhone's front-facing TrueDepth camera to capture depth data. This data:
-
-- Is processed **entirely on your device**
-- Is streamed **only to your local Wi-Fi network** via the NDI protocol
-- Is **never stored** on your device (no recordings, no cache, no logs)
-- Is **never transmitted** outside your local network
-- Is **never sent** to us or any third party
-
-The depth stream is sent over your local network using the NDI (Network Device Interface) protocol to NDI-compatible software (like TouchDesigner) running on other devices on the same Wi-Fi network. This data never leaves your local network.
+- **No biometric identification** — TDLidar does not use Face ID or any face-recognition feature
+- **No sharing of TrueDepth or face data with third parties** — depth maps and ARKit face data never leave your device except as live OSC / NDI on your own local Wi-Fi
+- **No reading of your existing photos or videos** — Photos access is write-only
 
 ---
 
-## Local Network Access
+## Data TDLidar accesses, and why
 
-TDLidar requires local network access to stream depth data via NDI. This access is used exclusively for:
+All of the following is processed in real time, on-device, and emitted only to receivers on your local Wi-Fi network. Nothing is stored long-term unless you explicitly tap "Record" or "Save".
 
-- Broadcasting the NDI video stream on your local network
-- Allowing NDI receivers (like TouchDesigner) to discover and connect to the stream
+### Camera (NSCameraUsageDescription)
 
-No data is sent to the internet, to external servers, or to any party outside your local network.
+- **Front TrueDepth camera** — used for the depth video stream (NDI) and ARKit Face Tracking mode.
+- **Rear LiDAR scanner** (Pro iPhones) — used as an alternative depth source.
+- **Regular cameras** — used for the optional RGB NDI stream (v5.2+) and as the visual reference for ARKit body and hand tracking.
+
+The camera image is processed in memory and sent to NDI receivers on your local network. It is never recorded or written to disk unless you explicitly start a recording (see *Recording* below).
+
+### TrueDepth API + ARKit Face Tracking
+
+When you enable Face mode on the Tracking page, TDLidar uses ARKit's `ARFaceTrackingConfiguration` to compute:
+
+- 52 ARKit blend-shape coefficients (e.g., `browInnerUp`, `eyeBlinkLeft`, `jawOpen`)
+- The 4×4 face transform matrix
+
+This **face data** is used solely as live OSC control data under `/tdlidar/face/*` for visual / interactive applications. It is **not stored, not used for identification, and not transmitted off your local Wi-Fi network**. No face image, no face mesh geometry, no Face ID hash leaves the app.
+
+### Microphone (NSMicrophoneUsageDescription)
+
+When Audio or Transcription mode is active, the microphone feed is processed in real time for:
+
+- **Audio analysis** — FFT spectrum, bass / mid / high levels, beat detection, dynamics, all streamed under `/tdlidar/audio/*`
+- **Speech recognition** (when in Transcription mode) — see below
+
+Audio buffers are processed in-memory and discarded each frame. They are **not recorded, not stored, and not transmitted off the device** other than as derived OSC values on your local Wi-Fi.
+
+### Speech Recognition (NSSpeechRecognitionUsageDescription)
+
+When Transcription mode is active, TDLidar uses Apple's on-device speech recognition (`SpeechAnalyzer` on iOS 26+, falling back to `SFSpeechRecognizer`) to convert speech to text. Recognition happens entirely on the device — **audio is never sent to Apple or any third-party server**. Recognized words are streamed as OSC under `/tdlidar/speech/*` and are not stored.
+
+### Motion Sensors (NSMotionUsageDescription)
+
+When Motion mode is active, TDLidar reads:
+
+- Accelerometer
+- Gyroscope
+- Magnetometer (compass)
+- Barometer / altitude
+- Battery level
+
+These values are streamed as live OSC under `/tdlidar/motion/*`. No motion history is recorded.
+
+### Local Network (NSLocalNetworkUsageDescription, NSBonjourServices)
+
+TDLidar publishes itself as an NDI source via Bonjour (`_ndi._tcp` / `_ndi._udp`) on your local Wi-Fi so NDI receivers (TouchDesigner, OBS, Resolume, vMix) can discover it. OSC messages are sent as UDP to the IP and port you configure in Settings. **No traffic leaves your local network.**
+
+### Recording (NSPhotoLibraryAddUsageDescription)
+
+When you tap the record button on the LiDAR page, TDLidar writes the colormapped NDI depth output to an `.mp4` video file inside the app's private storage (`Documents/NDIRecordings/`). These files are visible only to TDLidar; they are not synced to iCloud unless you have iCloud Backup enabled at the device level.
+
+When you open the Recordings folder in the app and tap "Save" on a clip, TDLidar uses **write-only Photos access** (`PHPhotoLibrary.requestAuthorization(for: .addOnly)`) to copy that single clip into your Photos library. TDLidar **cannot read your existing photos or videos** — the access is strictly write-only and limited to clips you explicitly export.
+
+You can delete recordings from inside the app at any time. Uninstalling TDLidar removes the in-app recordings; clips already exported to Photos remain in Photos until you delete them.
 
 ---
 
-## Third-Party Services
+## Apple Watch Companion (optional)
 
-TDLidar does not use any third-party services, SDKs, or frameworks that collect data. The NDI SDK (by Vizrt/NDI) is used for local network streaming only and does not collect or transmit any data externally.
+The TDLidar Watch App is an **optional** companion. Users without an Apple Watch never see it. When installed and active, the watch app reads:
+
+- **Motion sensors** (`CMMotionManager`) — wrist orientation, accel, gyro
+- **HealthKit** — heart rate during a foreground workout session (Active Energy is also written so the workout session stays alive)
+
+These values are sent over Apple's `WCSession` (Bluetooth / Wi-Fi peer link to the paired iPhone), where the iPhone-side `PhoneSessionManager` republishes them as OSC under `/tdlidar/watch/*`.
+
+The watch app:
+- Does **not** transmit data over its own internet connection
+- Does **not** store sensor or health data anywhere
+- Uses HealthKit only as an in-memory live source — no records are written to your Health app other than the workout session itself, which is required by Apple to keep the heart-rate stream open
 
 ---
 
-## Data Storage
+## Data storage
 
-TDLidar does not store any data on your device beyond its own app settings (depth mode preferences, frame rate, etc.). These settings are stored locally in the app sandbox and are deleted when you uninstall the app.
+TDLidar stores the following on your device only:
+
+- **App settings** (depth mode, frame rate, NDI options, motion sensitivity, etc.) in the iOS settings sandbox. Removed when you uninstall the app.
+- **Welcome-screen "seen" flag** in `UserDefaults`. Removed when you uninstall.
+- **NDI Recordings** in the app's `Documents/NDIRecordings/` folder when you tap Record. You control these — delete them in the Recordings view inside TDLidar, or by uninstalling the app.
+
+No personal data, no sensor history, no user-identifying information is stored.
+
+---
+
+## Third-party software
+
+TDLidar uses the following third-party software, none of which collects user data:
+
+- **NDI® SDK** by Vizrt NDI AB — used solely for local-network video transport. No analytics, no internet calls.
+- **Apple frameworks only** for everything else (AVFoundation, ARKit, CoreMotion, CoreLocation–not used, HealthKit on watch, SpeechAnalyzer / SFSpeechRecognizer, Photos, Vision, CoreML).
+
+NDI® is a registered trademark of Vizrt NDI AB.
 
 ---
 
@@ -184,7 +135,7 @@ TDLidar does not collect any data from anyone, including children under 13. The 
 
 ## Changes to This Policy
 
-If we make changes to this privacy policy, we will update the "Last Updated" date at the top of this page. Since TDLidar does not collect data, any future changes would only reflect new features or clarifications — not new data collection practices.
+If we make changes to this privacy policy, we will update the "Last Updated" date at the top of this page. Since TDLidar does not collect data, future changes would only reflect new features or clarifications — not new data collection practices.
 
 ---
 
@@ -192,12 +143,7 @@ If we make changes to this privacy policy, we will update the "Last Updated" dat
 
 If you have any questions about this privacy policy, you can reach us at:
 
-- **GitHub:** https://github.com/aristideslintzeris/TDLidar
+- **GitHub:** <https://github.com/aristideslintzeris/TDLidar>
 - **Developer:** Aristides Lintzeris
 
-
-
-*This privacy policy applies to TDLidar version 2.0 and later.*
-
-
-*TDInput is an independent app. Apple, Apple Watch, iPhone, TouchDesigner, and HealthKit are trademarks of their respective owners.*
+---
