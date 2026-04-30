@@ -143,7 +143,7 @@ If we make changes to this privacy policy, we will update the "Last Updated" dat
 
 If you have any questions about this privacy policy, you can reach us at:
 
-- **GitHub:** <https://github.com/aristideslintzeris/TDLidar>
+- **GitHub:** aristideslintzeris@icloud.com
 - **Developer:** Aristides Lintzeris
 
 ---
