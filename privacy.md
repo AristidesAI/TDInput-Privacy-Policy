@@ -5,7 +5,7 @@
 
 ## Overview
 
-TDLidar is a real-time capture suite developed by Aristides Lintzeris for streaming depth, camera, motion, audio, and tracking data from an iPhone (and optionally an Apple Watch) into TouchDesigner, OBS, Resolume, and other NDI / OSC receivers on the same Wi-Fi network.
+TDLidar is a real-time capture suite developed by Aristides Lintzeris for streaming depth, camera, motion, audio, and tracking data from an iPhone (and optionally an Apple Watch) into TouchDesigner, OBS, Resolume, and other NDI / OSC receivers on the same Wi-Fi network. NDI SDK Is only used to send video over the local network
 
 **The short version: TDLidar does not collect, store, or transmit any personal data off your local network. Period.**
 
