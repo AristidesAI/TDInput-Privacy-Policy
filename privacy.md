@@ -1,11 +1,11 @@
-# Privacy Policy — TDLidar
+# Privacy Policy & Terms — TDLidar
 
-**Last Updated: April 30, 2026**
-*Applies to TDLidar 6.0 and later, including the optional TDLidar Watch App companion.*
+**Last Updated: May 4, 2026**
+*Applies to TDLidar 7.0 and later, including the optional TDLidar Watch App companion and the TDLidar Pro in-app purchases (auto-renewing subscription and one-time lifetime purchase).*
 
 ## Overview
 
-TDLidar is a real-time capture suite developed by Aristides Lintzeris for streaming depth, camera, motion, audio, and tracking data from an iPhone (and optionally an Apple Watch) into TouchDesigner, OBS, Resolume, and other NDI / OSC receivers on the same Wi-Fi network. NDI SDK Is only used to send video over the local network
+TDLidar is a real-time capture suite developed by Aristides Lintzeris for streaming depth, camera, motion, audio, and tracking data from an iPhone (and optionally an Apple Watch) into TouchDesigner, OBS, Resolume, and other NDI / OSC receivers on the same Wi-Fi network.
 
 **The short version: TDLidar does not collect, store, or transmit any personal data off your local network. Period.**
 
@@ -49,6 +49,8 @@ When you enable Face mode on the Tracking page, TDLidar uses ARKit's `ARFaceTrac
 
 This **face data** is used solely as live OSC control data under `/tdlidar/face/*` for visual / interactive applications. It is **not stored, not used for identification, and not transmitted off your local Wi-Fi network**. No face image, no face mesh geometry, no Face ID hash leaves the app.
 
+**Per Apple's TrueDepth API requirements:** TrueDepth depth maps and ARKit face-tracking data **are never shared with third parties** by TDLidar. Nothing collected from the TrueDepth API is sold, traded, or transmitted to any analytics provider, advertiser, server, or partner. The only network destinations are NDI / OSC receivers on your own local Wi-Fi network, which you choose and control yourself.
+
 ### Microphone (NSMicrophoneUsageDescription)
 
 When Audio or Transcription mode is active, the microphone feed is processed in real time for:
@@ -85,6 +87,42 @@ When you tap the record button on the LiDAR page, TDLidar writes the colormapped
 When you open the Recordings folder in the app and tap "Save" on a clip, TDLidar uses **write-only Photos access** (`PHPhotoLibrary.requestAuthorization(for: .addOnly)`) to copy that single clip into your Photos library. TDLidar **cannot read your existing photos or videos** — the access is strictly write-only and limited to clips you explicitly export.
 
 You can delete recordings from inside the app at any time. Uninstalling TDLidar removes the in-app recordings; clips already exported to Photos remain in Photos until you delete them.
+
+---
+
+## In-App Purchases & TDLidar Pro Subscription (NEW IN 7.0)
+
+TDLidar 7.0 introduces an optional paid feature tier — **TDLidar Pro** — sold as one of two in-app purchases through Apple's App Store:
+
+- **TDLidar Pro Yearly** (`aristides.lintzeris.TDLidar.pro.annual`) — auto-renewing subscription, $9.99/year, includes a 7-day free trial for new subscribers.
+- **TDLidar Pro Lifetime** (`aristides.lintzeris.TDLidar.pro.lifetime`) — non-consumable one-time purchase, $29.99, never expires.
+
+The free tier of TDLidar continues to include every feature shipped in 6.x. Pro adds HD depth output, edge-preserving smoothing, additional colormaps, point cloud OSC streaming, head-overlay mode, alpha-channel NDI, and Raw-mode customization.
+
+### Payment processing
+
+**All payment processing for TDLidar Pro is handled exclusively by Apple Inc. via the App Store.** TDLidar does not receive, process, view, or store any payment information — no card numbers, no billing addresses, no Apple ID details, no purchase tokens. Payment is charged to the Apple ID of the device on which the purchase is made.
+
+The only purchase data TDLidar reads is Apple's `Transaction.currentEntitlements` API, which returns a yes/no entitlement state ("Pro is unlocked" / "Pro is not unlocked") and is used solely to gate Pro-only feature toggles inside the app. The entitlement state is cached locally in `UserDefaults` so a paying customer can use Pro features offline; it is never transmitted off the device.
+
+### Subscription terms
+
+- **Auto-renewal:** The Pro Yearly subscription auto-renews at the end of each annual period unless cancelled at least 24 hours before the renewal date.
+- **Free trial:** The 7-day free trial is offered to new subscribers only. If you cancel during the trial, you are not charged. If you do not cancel, the subscription begins automatically at the end of the trial.
+- **Cancellation:** You can cancel at any time in **iOS Settings → Apple ID → Subscriptions** (or via the App Store app → your account → Subscriptions). Cancellation takes effect at the end of the current paid period — Apple does not pro-rate.
+- **Lifetime purchase:** The Lifetime in-app purchase is one-time and never renews. It is tied to the Apple ID that made the purchase and can be restored on any device signed in with the same Apple ID via the **Restore Purchases** button in the paywall or in Settings → TDLidar Pro.
+
+### Refunds
+
+All refund requests for TDLidar Pro are handled by Apple under their standard refund policy. To request a refund, visit <https://reportaproblem.apple.com>. TDLidar (Aristides Lintzeris) does not have access to your payment information and cannot issue refunds directly — Apple is the only party who can.
+
+### Standard EULA
+
+Use of the TDLidar Pro in-app purchases is governed by Apple's Standard End User License Agreement: <https://www.apple.com/legal/internet-services/itunes/dev/stdeula/>. By purchasing TDLidar Pro you agree to those terms in addition to this Privacy Policy.
+
+### Restore Purchases
+
+Per App Store Review Guideline 3.1.1, the **Restore Purchases** button is provided in two locations: at the bottom of the in-app paywall, and in Settings → TDLidar Pro. Tapping it calls Apple's `AppStore.sync()` API to refresh entitlements from your Apple ID — useful after reinstalling the app, switching to a new device, or resolving any "Pro features locked" state for a paid subscriber.
 
 ---
 
@@ -139,11 +177,34 @@ If we make changes to this privacy policy, we will update the "Last Updated" dat
 
 ---
 
+## Disclaimer of Warranty
+
+TDLidar (including the optional Apple Watch companion and the TDLidar Pro in-app purchases) is provided **"AS IS"** and **"AS AVAILABLE"** without warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
+
+The developer (Aristides Lintzeris) does not warrant that the app will be uninterrupted, error-free, secure, or free of viruses, and does not guarantee compatibility with every iPhone model, every iOS version, every Wi-Fi network configuration, or every NDI / OSC receiver. Use of TDLidar in production environments — including live performances, broadcast settings, and commercial installations — is at the user's own risk. The user is responsible for testing the app in their specific deployment environment before relying on it.
+
+## Limitation of Liability
+
+To the maximum extent permitted by applicable law, in no event shall the developer be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, loss of data, loss of goodwill, business interruption, equipment damage, or any other commercial damages or losses, arising out of or in connection with the use or inability to use TDLidar — even if the developer has been advised of the possibility of such damages.
+
+Total liability for any claim arising out of or relating to the app shall not exceed the amount you paid for the app or for any active TDLidar Pro subscription in the 12 months preceding the claim.
+
+Some jurisdictions do not allow the exclusion of certain warranties or the limitation or exclusion of liability for incidental or consequential damages, so the above limitations or exclusions may not apply to you. In those jurisdictions, the developer's liability is limited to the greatest extent permitted by law.
+
+## Governing Law
+
+This Privacy Policy and your use of TDLidar are governed by the laws of the developer's country of residence, without regard to its conflict-of-law principles. Any dispute arising under this Privacy Policy that is not resolved through Apple's standard App Store dispute process shall be brought in the courts of that jurisdiction.
+
+## Severability
+
+If any provision of this Privacy Policy is held to be invalid or unenforceable by a court of competent jurisdiction, the remaining provisions remain in full force and effect.
+
 ## Contact
 
-If you have any questions about this privacy policy, you can reach us at:
+If you have any questions about this privacy policy, the in-app purchases, or the app's behaviour, you can reach us at:
 
-- **GitHub:** aristideslintzeris@icloud.com
+- **Instagram:**  <https://www.instagram.com/aristides.lab/>
+- **Privacy Policy repository:**  <https://github.com/AristidesAI/TDInput-Privacy-Policy/>
 - **Developer:** Aristides Lintzeris
 
----
+For payment, billing, refund, and subscription-management questions, please contact Apple Support at <https://support.apple.com> — TDLidar (Aristides Lintzeris) does not have access to payment information and cannot resolve billing issues directly.
